@@ -4,11 +4,24 @@
 
 @layer components{
   .container {
-    @apply max-w-[1200px] px-[15px] self-center;
+    @apply max-w-[1200px] px-[15px] self-center mx-auto;
   }
 }
 
+html{
+  height: 100%;
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+}
+
 body{
+  min-height: 100vh;
   font-family: var(--roboto-regular);
+  overflow-x: hidden;
 }
 

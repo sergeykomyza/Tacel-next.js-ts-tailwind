@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'present-gradient': 'linear-gradient(180deg, rgba(43, 78, 45, 0.3) 0%, rgba(42, 77, 43, 0) 100%)',
+      },
       screens: {
         'sm': '640px',
         // => @media (min-width: 640px) { ... }
