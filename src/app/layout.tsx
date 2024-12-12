@@ -3,16 +3,6 @@ import localFont from "next/font/local";
 import "./globals.scss";
 import Header from "../components/Header";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 const robotoRegular = localFont({
   src: "./fonts/Roboto-Regular.ttf",
   variable: "--roboto-regular",
@@ -22,6 +12,11 @@ const robotoBold = localFont({
   src: "./fonts/Roboto-Bold.ttf",
   variable: "--roboto-bold",
   weight: "700",
+});
+const robotoLight = localFont({
+  src: "./fonts/Roboto-Light.ttf",
+  variable: "--roboto-light",
+  weight: "300",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoRegular.variable} ${robotoBold.variable} antialiased`}
+        className={`
+          ${robotoRegular.variable} 
+          ${robotoBold.variable} 
+          ${robotoLight.variable} 
+          antialiased
+        `}
       >
         <div>
           <Header />

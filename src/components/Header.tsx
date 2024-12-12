@@ -31,7 +31,7 @@ export default function Header(){
                 height={40}
                 priority
               />
-              <span className="hidden lg:block font-[family-name:var(--roboto-regular)] text-[10px]/[10px]">Пищевой продукт <br/> для энтерального питания</span>
+              <span className="hidden lg:block font-regular text-[10px]/[10px]">Пищевой продукт <br/> для энтерального питания</span>
             </a>
             <ul 
               className={`
@@ -50,17 +50,15 @@ export default function Header(){
             >
               {menu.map((link)=>(
                 <li className="mx-[15px] xl:mx-[24px]" key={link.id}> 
-                  <a className="font-[family-name:var(--roboto-bold)] text-[13px] xl:text-[16px]" href={link.url}>{link.title}</a>
+                  <a className="font-bold text-[13px] xl:text-[16px]" href={link.url}>{link.title}</a>
                 </li>
               ))}
             </ul>
 
             <div className="flex flex-col">
-              <a className="header__phone font-[family-name:var(--roboto-bold)]" href="tel:+74952487181">+7 (495) 248-71-81 </a>
-              <a className="header__phone font-[family-name:var(--roboto-bold)]" href="tel:+79037928075">+7 (903) 792-80-75 </a>
+              <a className="header__phone font-bold" href="tel:+74952487181">+7 (495) 248-71-81 </a>
+              <a className="header__phone font-bold" href="tel:+79037928075">+7 (903) 792-80-75 </a>
             </div>
-
-            
 
             <button 
               className="focus:outline-none w-6 h-8 cursor-pointer lg:hidden "

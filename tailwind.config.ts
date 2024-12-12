@@ -4,16 +4,33 @@ export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      fontFamily: {
+        bold: ['var(--roboto-bold)'],
+        regular: ['var(--roboto-regular)'],
+        light: ['var(--roboto-light)'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        green: '#2B4E2D',
+      },
+      borderRadius: {
+        '30': '30px',
+      },
+      borderWidth: {
+        DEFAULT: '1px',
       },
       backgroundImage: {
         'present-gradient': 'linear-gradient(180deg, rgba(43, 78, 45, 0.3) 0%, rgba(42, 77, 43, 0) 100%)',
+        'button-green': 'linear-gradient(180deg, #649465 0%, #2B4E2D 100%)'
+      },
+      gap: {
+        '30': '30px',
       },
       screens: {
         'sm': '640px',

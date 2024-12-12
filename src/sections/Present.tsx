@@ -1,30 +1,18 @@
-
-
 export default function Present(){
   return(
-      <section className={`
-        pb-60 
-        pt-72
-        overflow-x-hidden
-        bg-present-gradient
-      `}>
+      <section className="pb-60 pt-72 overflow-x-hidden bg-present-gradient">
         <div className="container">
-          <div className={`
-            relative
-            flex
-            items-center
-            mb-36  
-          `}>
+          <div className="relative flex items-center mb-36">
             <div className="relative z-[1]"> 
-              <h1 className="mb-7 font-[family-name:var(--roboto-bold)] text-[35px]/[41px]">
+              <h1 className="mb-7 font-bold text-[35px]/[41px]">
                 Новый продукт на основе мяса для <br/> энтерального питания- жидкая, <br/> готовая к употреблению, смесь
               </h1>
-              <p className="home__text">
+              <p className="mb-14 font-light text-[18px]/[21px]">
                 Полученный от здоровых животных, которые были выращены без <br/> использования стимуляторов роста, гормональных препаратов и других <br/> нетрадиционных кормовых добавок
               </p>
-              <div className="button-box home__buttons">
-                <button className="button button-green">Купить смесь</button>
-                <button className="button button-transparent">Скачать презентацию</button>
+              <div className="flex items-center flex-wrap gap-30">
+                <button className="flex items-center justify-center w-[244px] h-[60px] text-[16px]/[19px] font-bold text-white rounded-30 bg-button-green">Купить смесь</button>
+                <button className="flex items-center justify-center w-[244px] h-[60px] text-[16px]/[19px] font-bold text-green rounded-30 bg-transparent border-solid border-green border ">Скачать презентацию</button>
               </div>
             </div>
             {/* <img className="home__img" src="img/home-img.webp" alt=""> */}
