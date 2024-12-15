@@ -35,17 +35,25 @@ export default function Header(){
             </a>
             <ul 
               className={`
-                absolute top-[98px] 
-                flex flex-col 
-                items-end 
-                w-[100%] 
-                px-[15px] 
+                absolute 
+                z-10
                 lg:relative 
+                top-[90px] 
                 lg:top-0 
-                lg:w-auto 
+                flex 
+                flex-col 
                 lg:flex-row
-                transition-all 
-                ${isOpen ? "right-0" : "right-[-100%] lg:right-0"}
+                items-end 
+                left-0
+                w-[100%] 
+                lg:w-auto 
+                px-[15px]
+                pb-4
+                lg:pb-0 
+                box-border
+                bg-white
+                transition-opacity duration-300 ease-in-out
+                ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 lg:opacity-100 pointer-events-none lg:pointer-events-auto"}
               `}
             >
               {menu.map((link)=>(
@@ -56,8 +64,8 @@ export default function Header(){
             </ul>
 
             <div className="flex flex-col">
-              <a className="header__phone font-bold" href="tel:+74952487181">+7 (495) 248-71-81 </a>
-              <a className="header__phone font-bold" href="tel:+79037928075">+7 (903) 792-80-75 </a>
+              <a className="header__phone text-[13px]/[1] lg:text-[16px]/[1] font-bold" href="tel:+74952487181">+7 (495) 248-71-81 </a>
+              <a className="header__phone text-[13px]/[1] lg:text-[16px]/[1] font-bold" href="tel:+79037928075">+7 (903) 792-80-75 </a>
             </div>
 
             <button 
