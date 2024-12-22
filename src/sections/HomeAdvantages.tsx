@@ -8,7 +8,7 @@ export default function HomeAdvantages(){
     '<b class="block font-bold">Прост в</b> употреблении'
   ]
   return(
-    <ul className="relative z-[1] grid grid-auto-fit gap-7"> 
+    <ul className="relative z-[1] grid grid-auto-fit gap-3 lg:gap-7"> 
       {
         advantages.map((item, index)=>(
           <li
@@ -30,22 +30,6 @@ export default function HomeAdvantages(){
           </li>
         ))
       }
-      {/*<article className="home-advantages__item"> 
-          <img className="home-advantages__icon" src="img/icon-advantages-1.svg" alt="/"> 
-        <span className="home-advantages__text"><b>Низкий риск</b> контаминации</span>
-      </article>
-      <article className="home-advantages__item"> 
-        <img className="home-advantages__icon" src="img/icon-advantages-2.svg" alt="/"> 
-        <span className="home-advantages__text"><b>Не содержит</b> лактозу</span>
-      </article>
-      <article className="home-advantages__item"> 
-        <img className="home-advantages__icon" src="img/icon-advantages-3.svg" alt="/"> 
-        <span className="home-advantages__text">Практичная и <b>удобная упаковка</b></span>
-      </article>
-      <article className="home-advantages__item"> 
-        <img className="home-advantages__icon" src="img/icon-advantages-4.svg" alt="/"> 
-        <span className="home-advantages__text"><b>Прост в</b> употреблении</span>
-      </article>*/}
     </ul>
   )
 }

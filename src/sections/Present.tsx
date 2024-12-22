@@ -3,9 +3,9 @@ import HomeAdvantages from "./HomeAdvantages"
 
 export default function Present(){
   return(
-      <section className=" lg:pb-60 pt-28 lg:pt-72 bg-present-gradient">
+      <section className=" lg:pb-60 pb-20 pt-28 lg:pt-72 bg-present-gradient">
         <div className="container">
-          <div className="relative flex flex-col-reverse lg:flex-row items-center mb-36">
+          <div className="relative flex flex-col-reverse lg:flex-row items-center mb-7 lg:mb-36">
             <div className="relative z-[1]"> 
               <h1 className="mb-7 font-bold text-[25px]/[25px] lg:text-[35px]/[41px]">
                 Новый продукт на основе мяса для <br className="hidden lg:block"/> энтерального питания- жидкая, <br className="hidden lg:block"/> готовая к употреблению, смесь
