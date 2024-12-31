@@ -28,7 +28,8 @@ export default {
       backgroundImage: {
         'present-gradient': 'linear-gradient(180deg, rgba(43, 78, 45, 0.3) 0%, rgba(42, 77, 43, 0) 100%)',
         'button-green': 'linear-gradient(180deg, #649465 0%, #2B4E2D 100%)',
-        'icon-arrow-list': "url('/icon-arrow.svg')"
+        'icon-arrow-list': "url('/icon-arrow.svg')",
+        'icon-num': "url('/icon-num.png')"
       },
       backgroundColor: {
         'grey': 'rgba(100, 147, 101, 0.1)',

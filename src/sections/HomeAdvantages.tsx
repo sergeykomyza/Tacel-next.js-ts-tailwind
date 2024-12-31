@@ -8,7 +8,7 @@ export default function HomeAdvantages(){
     '<b class="block font-bold">Прост в</b> употреблении'
   ]
   return(
-    <ul className="relative z-[1] grid grid-auto-fit gap-3 lg:gap-7"> 
+    <ul className="relative z-[1] grid-auto-fit gap-3 lg:gap-7"> 
       {
         advantages.map((item, index)=>(
           <li
@@ -18,14 +18,15 @@ export default function HomeAdvantages(){
             <Image
               className="mr-5"
               src={`/icon-advantages-${index+1}.svg`}
-              alt="logo"
+              alt="icon"
               width={50}
               height={50}
               priority
             />
             <span 
               className="font-light text-[16px]/[1]" 
-              dangerouslySetInnerHTML={{ __html: item }}>
+              dangerouslySetInnerHTML={{ __html: item }}
+            >
             </span>
           </li>
         ))

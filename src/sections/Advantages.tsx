@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionTitle from "@/layouts/SectionTitle";
 
 interface IAdvantages{
@@ -8,7 +9,7 @@ interface IAdvantages{
 export default function Advantages(){
 
   const advantages: IAdvantages[] = [
-    {id: '1', name: '<b>Низкая вязкость</b> <br> и хорошая текучесть'},
+    {id: 1, name: '<b>Низкая вязкость</b> <br> и хорошая текучесть'},
     {id: 2, name: '<b>Строго стандартизированный </b> <br> состав и осмолярность'},
     {id: 3, name: 'Низкий риск <br> <b>контаминации</b>'},
     {id: 4, name: 'Возможность<b> долговременного </b> <br> применения'},
@@ -24,14 +25,25 @@ export default function Advantages(){
         <SectionTitle 
           title="Преимущества готовых к употреблению <b>жидких смесей</b>"
         />
-        <ul>
+        <ul className="grid-auto-fit gap-3 lg:gap-7">
           {
             advantages.map((item, i)=>(
               <li
                 key={item.id}
-                className="flex items-center p-5 bg-white rounded-xl shadow-item"
+                className="relative pt-3 pr-3 pb-4 pl-3 bg-white rounded-xl shadow-item"
               >
-                <span>{`0${item.id}`}</span>
+                <Image
+                  className="absolute top-0 left-0"
+                  src={`/icon-advantages-${i+5}.png`}
+                  alt="icon"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="right"
+                />
+                <span className="flex mb-8 text-[14px]/[1] font-bold text-[#2B4E2D]">{`0${item.id}`}</span>
+                <p
+                  dangerouslySetInnerHTML={{ __html: item.name }}
+                ></p>
               </li>
             ))
           }
