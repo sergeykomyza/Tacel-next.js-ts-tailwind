@@ -4,34 +4,24 @@ import React, {useRef} from 'react'
 
 import SectionTitle from "@/layouts/SectionTitle";
 
+import { articles } from '@/data/articles';
+
 import Image from 'next/image';
-import {Pagination} from 'swiper/modules';
-import { Navigation } from "swiper/modules";
+import Link from 'next/link';
+
+import { Navigation, Pagination } from "swiper/modules";
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-interface ISlide{
-  id: number,
-  title: string,
-  date: string,
-  img: string
-}
-
 const Info = () => {
+
+  const slides = articles;
 
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
-
-  const slides: ISlide[] = [
-    {id: 1, title: 'Как оно работает и кто в нем нуждается',               date: '07.04.23', img: 'info-slide-1.webp'},
-    {id: 2, title: 'Преимущества энтерального питания',                    date: '07.04.23', img: 'info-slide-2.webp'},
-    {id: 3, title: 'Подобраем правильный рацион для энтерального питания', date: '07.04.23', img: 'info-slide-3.webp'},
-    {id: 4, title: 'Часто задаваемые вопросы о энтеральном питании',       date: '07.04.23', img: 'info-slide-4.webp'},
-    {id: 5, title: 'Как оно работает и кто в нем нуждается',               date: '07.04.23', img: 'info-slide-1.webp'},
-  ]
 
   return(
     <section className="pb-20">
@@ -100,6 +90,7 @@ const Info = () => {
               slides.map((item)=>(
                 <SwiperSlide key={item.id}>
                   <div className="relative rounded-[10px] overflow-hidden">
+                  <Link href={`/articles/${item.slug}`}>
                     <figure className="flex flex-col h-64 py-7 px-5 group cursor-pointer">
                       <Image
                         className="absolute top-0 left-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-[0.3s]"
@@ -113,9 +104,9 @@ const Info = () => {
                         {item.title}
                       </figcaption>
                     </figure>
+                  </Link>
                   </div>
                 </SwiperSlide>
-
               ))
             }
 
