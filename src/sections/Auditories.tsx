@@ -5,8 +5,7 @@ interface IAuditories{
   title: string,
   text: string
 }
-
-export default function Auditories(){
+const Auditories = () => {
 
   const auditories: IAuditories[] = [
     {id: 1, title: 'Для энтерального питания людей в послеоперационный период', text: 'Энтеральное питание является важным компонентом восстановительного периода после операции. В такой период организм нуждается в правильном балансе питательных веществ, чтобы справиться с трудностями восстановления'},
@@ -47,3 +46,5 @@ export default function Auditories(){
     </section>
   )
 }
+
+export default Auditories

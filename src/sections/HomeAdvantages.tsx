@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function HomeAdvantages(){
+const HomeAdvantages = () =>{
   const advantages = [
     '<b class="block font-bold">Низкий риск</b> контаминации',
     '<b class="block font-bold">Не содержит</b> лактозу',
@@ -34,3 +34,5 @@ export default function HomeAdvantages(){
     </ul>
   )
 }
+
+export default HomeAdvantages

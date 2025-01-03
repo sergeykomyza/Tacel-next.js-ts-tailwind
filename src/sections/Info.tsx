@@ -20,7 +20,7 @@ interface ISlide{
   img: string
 }
 
-export default function Info(){
+const Info = () => {
 
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
@@ -41,7 +41,7 @@ export default function Info(){
         />
         <div className='relative'>
           <button 
-            className='absolute z-10 top-[50%] left-0 2xl:-left-14 flex items-center justify-center w-10 h-10 rounded-[50%] bg-white btn-box-shadow' 
+            className='absolute z-10 top-[45%] left-0 2xl:-left-14 flex items-center justify-center w-10 h-10 rounded-[50%] bg-white btn-box-shadow' 
             ref={prevRef}
           >
             <Image
@@ -54,7 +54,7 @@ export default function Info(){
             />
           </button>
           <button 
-            className='absolute z-10 top-[50%] right-0 2xl:-right-14 flex items-center justify-center w-10 h-10 rounded-[50%] bg-white btn-box-shadow'
+            className='absolute z-10 top-[45%] right-0 2xl:-right-14 flex items-center justify-center w-10 h-10 rounded-[50%] bg-white btn-box-shadow'
             ref={nextRef}
           >
             <Image
@@ -121,7 +121,12 @@ export default function Info(){
 
           </Swiper>
         </div>
+        <div className='flex justify-center mt-10'>
+          <button className="flex items-center justify-center w-full sm:w-[307px] h-[60px] text-[16px]/[19px] font-bold text-white rounded-30 bg-button-green">Смотреть больше статей</button>
+        </div>
       </div>
     </section>
   )
 }
+
+export default Info;

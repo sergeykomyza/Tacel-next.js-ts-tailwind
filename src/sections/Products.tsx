@@ -13,7 +13,7 @@ interface ISlide{
   descr: string
 }
 
-export default function Products() {
+const Products = () => {
 
   const slides: ISlide[] = [
     {id: '1', title: '«Энмит» энтеральное питание', descr: 'со вкусом говядины (200 мл)'},
@@ -86,3 +86,5 @@ export default function Products() {
 
   );
 }
+
+export default Products

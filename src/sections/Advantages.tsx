@@ -6,7 +6,7 @@ interface IAdvantages{
   name: string,
 }
 
-export default function Advantages(){
+const Advantages = () => {
 
   const advantages: IAdvantages[] = [
     {id: 1, name: '<b>Низкая вязкость</b> <br> и хорошая текучесть'},
@@ -52,3 +52,5 @@ export default function Advantages(){
     </div>
   )
 }
+
+export default Advantages

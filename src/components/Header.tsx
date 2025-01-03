@@ -3,7 +3,7 @@
 import Image from "next/image";
 import {useState} from "react"
 
-export default function Header(){
+const Header = () => {
 
   const [isOpen, setIsOpen] = useState<Boolean>(false)
   const handleClick = ()=>{
@@ -22,7 +22,7 @@ export default function Header(){
     <header className="absolute top-0 left-0 w-[100%] py-[25px] bg-white"> 
         <div className="container mx-auto"> 
           <nav className="flex items-center justify-between"> 
-            <a className="flex items-center gap-[20px]" href="home.html"> 
+            <a className="flex items-center gap-5" href="home.html"> 
               <Image
                 className="dark:invert"
                 src="/logo.png"
@@ -94,3 +94,5 @@ export default function Header(){
       </header>
   )
 }
+
+export default Header

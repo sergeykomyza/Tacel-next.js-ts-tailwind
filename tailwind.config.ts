@@ -33,6 +33,7 @@ export default {
       },
       backgroundColor: {
         'grey': 'rgba(100, 147, 101, 0.1)',
+        'darkGreen': 'var(--darkGreen)'
       },
       gap: {
         '30': '30px',

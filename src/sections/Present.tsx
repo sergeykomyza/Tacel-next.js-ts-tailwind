@@ -1,7 +1,7 @@
 import Image from "next/image"
 import HomeAdvantages from "./HomeAdvantages"
 
-export default function Present(){
+const Present = () => {
   return(
       <section className=" lg:pb-60 pb-20 pt-28 lg:pt-72 bg-present-gradient">
         <div className="container">
@@ -33,3 +33,5 @@ export default function Present(){
     
   )
 }
+
+export default Present
