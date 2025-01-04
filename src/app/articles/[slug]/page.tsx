@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { articles } from '@/data/articles'; // Импортируем массив статей
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 interface ArticleProps {
   params: { slug: string };
@@ -20,8 +21,9 @@ const ArticlePage = ({ params }: ArticleProps) => {
   }
 
   return (
-    <div>
+    <div className='mt-40'>
       
+      <Breadcrumbs />
 
       <article className="pt-16 ">
         <Image

@@ -22,7 +22,9 @@ const Info = () => {
 
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
+
   console.log(slides)
+  
   return(
     <section className="pb-20">
       <div className="container">
