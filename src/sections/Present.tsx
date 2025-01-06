@@ -3,7 +3,7 @@ import HomeAdvantages from "./HomeAdvantages"
 
 const Present = () => {
   return(
-      <section className=" lg:pb-60 pb-20 pt-28 lg:pt-72 bg-present-gradient">
+      <section className=" lg:pb-60 pb-20 pt-28 lg:pt-48 bg-present-gradient">
         <div className="container">
           <div className="relative flex flex-col-reverse lg:flex-row items-center mb-7 lg:mb-36">
             <div className="relative z-[1]"> 

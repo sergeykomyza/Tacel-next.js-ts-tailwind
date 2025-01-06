@@ -19,7 +19,7 @@ const Header = () => {
   ]
 
   return(
-    <header className="absolute top-0 left-0 w-[100%] py-[25px] bg-white"> 
+    <header className="w-[100%] py-[25px] bg-white"> 
         <div className="container mx-auto"> 
           <nav className="flex items-center justify-between"> 
             <a className="flex items-center gap-5" href="home.html"> 

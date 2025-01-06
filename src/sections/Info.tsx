@@ -22,8 +22,6 @@ const Info = () => {
 
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
-
-  console.log(slides)
   
   return(
     <section className="pb-20">
@@ -121,7 +119,11 @@ const Info = () => {
           </Swiper>
         </div>
         <div className='flex justify-center mt-10'>
-          <button className="flex items-center justify-center w-full sm:w-[307px] h-[60px] text-[16px]/[19px] font-bold text-white rounded-30 bg-button-green">Смотреть больше статей</button>
+          <Link 
+            href="/articles"
+            className="flex items-center justify-center w-full sm:w-[307px] h-[60px] text-[16px]/[19px] font-bold text-white rounded-30 bg-button-green">
+              Смотреть больше статей
+          </Link>
         </div>
       </div>
     </section>

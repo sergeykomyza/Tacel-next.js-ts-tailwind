@@ -40,7 +40,7 @@ export default function RootLayout({
           antialiased
         `}
       >
-        <div>
+        <div className="flex flex-col min-h-[100vh]">
           <Header />
           {children}
           <Footer />

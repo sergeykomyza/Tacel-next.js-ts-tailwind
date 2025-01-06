@@ -21,44 +21,50 @@ const Breadcrumbs: React.FC = () => {
   };
 
   return (
-    <nav aria-label="breadcrumbs" className="text-sm">
-      <ul className="flex space-x-2">
-        {/* Главная */}
-        <li>
-          <Link href="/" className="text-blue-500 hover:underline">
-            Главная
-          </Link>
-        </li>
+    <nav aria-label="breadcrumbs" className="py-2 bg-[#EFF4F0]">
 
-        {/* Хлебные крошки */}
-        {pathnames.map((value, index) => {
-          const isLast = index === pathnames.length - 1; // Проверка на последний сегмент пути
-          const href = `/${pathnames.slice(0, index + 1).join("/")}`;
+      <div className="container">
 
-          let translatedValue = translations[value] || value; // Переводим сегменты пути
+        <ul className="flex flex-wrap gap-4">
+          {/* Главная */}
+          <li className="flex gap-4 text-[12px] ">
+            <Link href="/" className="">
+              Главная
+            </Link>
+          </li>
 
-          // Если это последний сегмент пути и это ID статьи, заменяем на название
-          if (isLast) {
-            const articleTitle = getTitleById(value); // Получаем название статьи по ID
-            if (articleTitle) {
-              translatedValue = articleTitle; // Подставляем название статьи
+          {/* Хлебные крошки */}
+          {pathnames.map((value, index) => {
+            const isLast = index === pathnames.length - 1; // Проверка на последний сегмент пути
+            const href = `/${pathnames.slice(0, index + 1).join("/")}`;
+
+            let translatedValue = translations[value] || value; // Переводим сегменты пути
+
+            // Если это последний сегмент пути и это ID статьи, заменяем на название
+            if (isLast) {
+              const articleTitle = getTitleById(value); // Получаем название статьи по ID
+              if (articleTitle) {
+                translatedValue = articleTitle; // Подставляем название статьи
+              }
             }
-          }
 
-          return (
-            <li key={href} className="flex items-center">
-              <span className="mx-2">/</span>
-              {isLast ? (
-                <span className="text-gray-500">{translatedValue}</span>
-              ) : (
-                <Link href={href} className="text-blue-500 hover:underline">
-                  {translatedValue}
-                </Link>
-              )}
-            </li>
-          );
-        })}
-      </ul>
+            return (
+              <li key={href} className="flex gap-4">
+                <span className="text-[12px]">/</span>
+                {isLast ? (
+                  <span className="text-[12px] font-bold text-[#2B4E2D]">{translatedValue}</span>
+                ) : (
+                  <Link href={href} className="text-[12px] ">
+                    {translatedValue}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+        
+      </div>
+
     </nav>
   );
 };

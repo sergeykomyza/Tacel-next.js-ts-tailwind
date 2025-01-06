@@ -38,6 +38,21 @@ html{
 	padding: 0;
 }
 
+* ::-webkit-scrollbar {
+  width: 6px; /* ширина всей полосы прокрутки */
+}
+
+* ::-webkit-scrollbar-track {
+  background-image: linear-gradient(180deg, rgba(43, 78, 45, 0.3) 0%, rgba(42, 77, 43, 0) 100%); /* цвет зоны отслеживания */
+  border-radius: 20px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background-color: var(--green); /* цвет бегунка */
+  border-radius: 20px; /* округлось бегунка */
+  border: 3px solid transparent;
+}
+
 body{
   min-height: 100vh;
   font-family: var(--roboto-light);
