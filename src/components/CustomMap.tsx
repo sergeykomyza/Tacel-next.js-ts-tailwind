@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import useLoadScript from "@/hooks/useLoadScript";
+import ContactsInfoBox from "./ContactsInfoBox";
 
 interface CustomMapProps {
   latitude: number;
@@ -40,18 +41,27 @@ const CustomMap: React.FC<CustomMapProps> = ({ latitude, longitude, zoom = 10 })
 
   useEffect(() => {
     if (isYmapsReady && mapContainerRef.current && !mapInstanceRef.current) {
-      mapInstanceRef.current = new window.ymaps.Map(mapContainerRef.current, {
+      var myMap1 = mapInstanceRef.current
+      myMap1 = new window.ymaps.Map(mapContainerRef.current, {
         center: [latitude, longitude],
         zoom: zoom,
       });
 
-      // Добавляем метку
-      const placemark = new window.ymaps.Placemark([latitude, longitude], {
-        hintContent: "Местоположение",
-        balloonContent: "Это пример метки",
+      var myGeoObject = new ymaps.GeoObject({
+          geometry: {
+              type: "Point"
+          },
       });
 
-      mapInstanceRef.current.geoObjects.add(placemark);
+      myMap1.geoObjects
+        .add(myGeoObject)
+        .add(new ymaps.Placemark([latitude, longitude], {
+            balloonContent: `<strong>115114, Москва, Павелецкая набережная, д. 2, стр. 2</strong>`,
+            iconCaption: `Москва, Павелецкая набережная`
+        },{
+            preset: 'islands#blueCircleDotIconWithCaption',
+            iconCaptionMaxWidth: '200'
+        }));
     }
   }, [isYmapsReady, latitude, longitude, zoom]);
 
@@ -59,7 +69,14 @@ const CustomMap: React.FC<CustomMapProps> = ({ latitude, longitude, zoom = 10 })
     return <div className="text-red-500">{error}</div>;
   }
 
-  return <div ref={mapContainerRef} style={{ width: "100%", height: "400px" }} />;
+  return (
+
+    <div ref={mapContainerRef} className="w-full h-auto lg:h-[400px]">
+      <div className="relative container">
+        <ContactsInfoBox />
+      </div>
+    </div>
+  );
 };
 
 export default CustomMap;

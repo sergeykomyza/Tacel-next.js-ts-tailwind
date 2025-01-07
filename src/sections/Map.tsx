@@ -7,7 +7,7 @@ const CustomMap = dynamic(() => import("@/components/CustomMap"), { ssr: false }
 
 const Map = () => {
   return(
-    <CustomMap latitude={55.751244} longitude={37.618423} zoom={10} />
+    <CustomMap latitude={55.716397} longitude={37.644737} zoom={13} />
   )
 }
 

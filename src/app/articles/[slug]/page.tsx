@@ -35,7 +35,7 @@ const ArticlePage = ({ params }: ArticleProps) => {
             title={article.title}
           />
 
-          <div className="flex flex-col lg:flex-row items-start gap-7">
+          <div className="flex flex-col-reverse lg:flex-row items-start gap-7">
 
             <div>
               <p

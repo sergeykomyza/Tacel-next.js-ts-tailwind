@@ -5,6 +5,7 @@ import { articles } from "@/data/articles"
 
 import Link from "next/link"
 import Image from "next/image"
+import Map from "@/sections/Map"
 
 const Articles = () => {
   return(
@@ -44,6 +45,7 @@ const Articles = () => {
           </ul>
         </div>
       </div>
+      <Map />
     </div>
   )
 }
