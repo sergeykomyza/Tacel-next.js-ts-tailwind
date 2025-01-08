@@ -1,12 +1,13 @@
+
+
 interface PageTitleProps{
-  title: string;
+  children: React.ReactNode;
 }
 
-export default function PageTitle({title}: PageTitleProps){
+export default function PageTitle({children}: PageTitleProps){
   return(
-    <h1 
-      dangerouslySetInnerHTML={{ __html: title }} 
-      className="mb-7 text-[25px]/[1] lg:text-[35px]/[1] font-bold"
-    />
+    <h1 className="mb-7 font-bold text-lg lg:text-xl">
+      {children}
+    </h1>
   )
 }

@@ -14,13 +14,11 @@ const Articles = () => {
 
       <div className="container">
         <div className="pt-16 pb-16">
-          <PageTitle
-            title="Полезные статьи"
-          />
+          <PageTitle>Полезные статьи</PageTitle>
           <ul className="relative z-[1] grid-auto-fit gap-3 lg:gap-7 ">
             {
               articles.map((item, index) => (
-                  <div className="relative rounded-[10px] overflow-hidden">
+                  <li className="relative rounded-[10px] overflow-hidden" key={item.id}>
                     <Link href={`/articles/${item.slug}`}>
                       <figure className="flex flex-col h-64 py-7 px-5 group cursor-pointer">
                         <Image
@@ -39,7 +37,7 @@ const Articles = () => {
                         {item.date}
                       </span>
                     </Link>
-                  </div>
+                  </li>
               ))
             }
           </ul>

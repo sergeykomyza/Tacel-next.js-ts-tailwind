@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import Image from "next/image";
 import {useState} from "react"
 
@@ -12,9 +13,9 @@ const Header = () => {
 
   const menu = [
     {id: 1, title: 'Где купить',      url: '#'},
-    {id: 2, title: 'О компании',      url: '#'},
+    {id: 2, title: 'О компании',      url: '/about'},
     {id: 3, title: 'Врачам',          url: '#'},
-    {id: 4, title: 'Полезные статьи', url: '#'},
+    {id: 4, title: 'Полезные статьи', url: '/articles'},
     {id: 5, title: 'Контакты',        url: '#'}
   ]
 
@@ -22,7 +23,7 @@ const Header = () => {
     <header className="w-[100%] py-[25px] bg-white"> 
         <div className="container mx-auto"> 
           <nav className="flex items-center justify-between"> 
-            <a className="flex items-center gap-5" href="home.html"> 
+            <Link className="flex items-center gap-5" href="/"> 
               <Image
                 className="dark:invert"
                 src="/logo.png"
@@ -32,7 +33,7 @@ const Header = () => {
                 priority
               />
               <span className="hidden lg:block font-regular text-[10px]/[10px]">Пищевой продукт <br/> для энтерального питания</span>
-            </a>
+            </Link>
             <ul 
               className={`
                 absolute 
@@ -44,6 +45,8 @@ const Header = () => {
                 flex-col 
                 lg:flex-row
                 items-end 
+                gap-4
+                lg:gap-0
                 left-0
                 w-[100%] 
                 lg:w-auto 
@@ -58,7 +61,7 @@ const Header = () => {
             >
               {menu.map((link)=>(
                 <li className="mx-[15px] xl:mx-[24px]" key={link.id}> 
-                  <a className="font-bold text-[13px] xl:text-[16px]" href={link.url}>{link.title}</a>
+                  <Link className="font-bold text-[13px] xl:text-[16px]" href={link.url}>{link.title}</Link>
                 </li>
               ))}
             </ul>

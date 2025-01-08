@@ -5,10 +5,15 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/layouts/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      fontSize: {
+        lg: ['25px', '30px'], // Размер шрифта 25px, line-height 30px
+        xl: ['35px', '41px'], // Размер шрифта 35px, line-height 41px
+      },
       fontFamily: {
         bold: ['var(--roboto-bold)'],
         regular: ['var(--roboto-regular)'],

@@ -7,7 +7,7 @@ const Present = () => {
         <div className="container">
           <div className="relative flex flex-col-reverse lg:flex-row items-center mb-7 lg:mb-36">
             <div className="relative z-[1]"> 
-              <h1 className="mb-7 font-bold text-[25px]/[25px] lg:text-[35px]/[41px]">
+              <h1 className="mb-7 font-bold text-lg lg:text-xl">
                 Новый продукт на основе мяса для <br className="hidden lg:block"/> энтерального питания- жидкая, <br className="hidden lg:block"/> готовая к употреблению, смесь
               </h1>
               <p className="mb-14 font-light text-[14px]/[1] lg:text-[18px]/[21px]">

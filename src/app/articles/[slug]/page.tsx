@@ -31,9 +31,7 @@ const ArticlePage = ({ params }: ArticleProps) => {
 
         <article className='pt-16 pb-16'>
 
-          <PageTitle
-            title={article.title}
-          />
+          <PageTitle>{article.title}</PageTitle>
 
           <div className="flex flex-col-reverse lg:flex-row items-start gap-7">
 
