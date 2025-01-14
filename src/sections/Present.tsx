@@ -8,7 +8,7 @@ import HomeAdvantages from "./HomeAdvantages"
 const Present = () => {
 
   const [isOpen, setIsOpen] = useState<Boolean>(false)
-  const showModal = () => {
+  const toggleModal = () => {
     setIsOpen(!isOpen)
   }
 
@@ -26,7 +26,7 @@ const Present = () => {
             <div className="flex items-center flex-wrap gap-4 lg:gap-30">
               <button 
                 className="flex items-center justify-center w-[244px] h-[60px] text-[16px]/[19px] font-bold text-white rounded-30 bg-button-green"
-                onClick={showModal}  
+                onClick={toggleModal}  
               >
                 Купить смесь
               </button>
@@ -45,14 +45,31 @@ const Present = () => {
         <HomeAdvantages />
       </div>
 
-      <div 
-        className={`fixed z-10 top-0 left-0 w-full h-full
+      <div
+        className={`fixed z-10 top-0 left-0 w-full h-full transition-all duration-[0.3s] bg-overlayDark
           ${isOpen ? "opacity-1 pointer-events-auto" : "opacity-0 pointer-events-none"}  
         `}
-        onClick={showModal}
+        onClick={toggleModal}
       >
-        <div className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] max-w-[718px] w-full h-[520px] bg-white rounded-xl">
+        <div
+          className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] flex max-w-[718px] w-full h-[520px] bg-white rounded-xl overflow-hidden"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className='md:block hidden w-[50%] pt-9 px-5 bg-lightGreen'>
+            <h6 className='text-[30px]/[35px] font-bold mb-4'>«Энмит» энтеральное питание</h6>
+            <p className=''>Может применяться в качестве основного или дополнительного источника питания, особенно в после- операционный период, и позволит решить проблему приедаемости пищи и расширить ассортимент предлагаемых продуктов для энтерального питания</p>
+            <Image
+              className="absolute bottom-0 left-0"
+              src="/modal-img.webp"
+              alt="product"
+              width={564}
+              height={431}
+              priority
+            />
+          </div>
+          <div className='w-[50%]'>
 
+          </div>
         </div>
       </div>
 

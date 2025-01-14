@@ -38,7 +38,9 @@ export default {
       },
       backgroundColor: {
         'grey': 'rgba(100, 147, 101, 0.1)',
-        'darkGreen': 'var(--darkGreen)'
+        'darkGreen': 'var(--darkGreen)',
+        'lightGreen': 'rgba(100, 147, 101, 0.5)',
+        'overlayDark': 'rgba(0,0,0,0.8)'
       },
       gap: {
         '30': '30px',
