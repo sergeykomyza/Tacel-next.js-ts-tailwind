@@ -22,7 +22,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        green: '#2B4E2D',
+        green: "var(--green)",
       },
       borderRadius: {
         '30': '30px',

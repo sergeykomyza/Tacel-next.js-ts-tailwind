@@ -8,13 +8,13 @@ import Info from "@/sections/Info";
 export default function Home() {
   return (
 
-    <div>
+    <main>
       <Present />
       <Products />
       <Advantages />
       <Auditories />
       <Info />
-    </div>
+    </main>
 
   );
 }
