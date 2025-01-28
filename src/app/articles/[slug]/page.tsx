@@ -9,21 +9,18 @@ interface ArticleProps {
   params: { slug: string };
 }
 
-// Генерация статических путей
 export async function generateStaticParams() {
   return articles.map((article) => ({
     slug: article.slug,
   }));
 }
 
-const ArticlePage = async ({ params }: ArticleProps) => {
-  // Явно используем params с async/await
-  const { slug } = await Promise.resolve(params);
+const ArticlePage =  ({ params }: ArticleProps) => {
+  
+  const { slug } = params;
 
-  // Поиск статьи по slug
   const article = articles.find((item) => item.slug === slug);
 
-  // Если статья не найдена
   if (!article) {
     return notFound();
   }
@@ -46,8 +43,11 @@ const ArticlePage = async ({ params }: ArticleProps) => {
                 className="rounded-lg object-cover"
                 src={`/${article.img}`}
                 alt={article.title}
-                width={470}
-                height={400}
+                style={{ width: '400px', height: 'auto' }}
+                width={0} 
+                height={0} 
+                sizes="100vw"
+                priority
               />
             </figure>
           </div>
