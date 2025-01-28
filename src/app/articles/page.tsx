@@ -28,6 +28,7 @@ const Articles = () => {
                           width={270}
                           height={254}
                           priority
+                          style={{ width: "auto", height: "auto" }}
                         />
                         <figcaption className="relative mt-auto font-bold text-white">
                           {item.title}

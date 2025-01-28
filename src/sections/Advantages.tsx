@@ -33,12 +33,12 @@ const Advantages = () => {
                 className="relative pt-3 pr-3 pb-4 pl-3 bg-white rounded-xl shadow-item"
               >
                 <Image
-                  className="absolute top-0 left-0"
+                  className="absolute top-0 left-0 object-cover object-right"
                   src={`/icon-advantages-${i+5}.png`}
                   alt="icon"
-                  layout="fill"
-                  objectFit="contain"
-                  objectPosition="right"
+                  width={272}
+                  height={108}
+                  style={{ width: "auto", height: "auto" }}
                 />
                 <span className="flex mb-8 text-[14px]/[1] font-bold text-[#2B4E2D]">{`0${item.id}`}</span>
                 <p

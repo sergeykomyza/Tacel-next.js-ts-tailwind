@@ -8,7 +8,8 @@ import { articles } from "@/data/articles"; // Импортируем данны
 // Словарь для перевода статичных сегментов пути
 const translations: { [key: string]: string } = {
   articles: "Статьи",
-  about: "О компании"
+  about: "О компании",
+  contacts: "Контакты"
 };
 
 const Breadcrumbs: React.FC = () => {

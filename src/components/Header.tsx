@@ -6,7 +6,7 @@ import {useState} from "react"
 
 const Header = () => {
 
-  const [isOpen, setIsOpen] = useState<Boolean>(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   const handleClick = ()=>{
     setIsOpen(!isOpen)
   }
@@ -16,7 +16,7 @@ const Header = () => {
     {id: 2, title: 'О компании',      url: '/about'},
     {id: 3, title: 'Врачам',          url: '#'},
     {id: 4, title: 'Полезные статьи', url: '/articles'},
-    {id: 5, title: 'Контакты',        url: '#'}
+    {id: 5, title: 'Контакты',        url: '/contacts'}
   ]
 
   return(

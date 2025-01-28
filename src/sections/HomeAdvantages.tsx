@@ -21,7 +21,7 @@ const HomeAdvantages = () =>{
               alt="icon"
               width={50}
               height={50}
-              priority
+              style={{ width: "auto", height: "auto" }}
             />
             <span 
               className="font-light text-[16px]/[1]" 
