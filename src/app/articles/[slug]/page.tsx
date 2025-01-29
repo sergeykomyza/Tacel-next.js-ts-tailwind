@@ -15,8 +15,8 @@ export async function generateStaticParams() {
   }));
 }
 
-const ArticlePage =  ({ params }: ArticleProps) => {
-  
+const ArticlePage = ({ params }: ArticleProps) => {
+
   const { slug } = params;
 
   const article = articles.find((item) => item.slug === slug);
