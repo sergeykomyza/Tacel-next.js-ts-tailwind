@@ -1,5 +1,6 @@
 
-import Products from "@/sections/Products";
+
+import ProductsServerComponent from "@/components/ProductsServerComponent";
 import Present from "../sections/Present";
 import Advantages from "@/sections/Advantages";
 import Auditories from "@/sections/Auditories";
@@ -10,7 +11,7 @@ export default function Home() {
 
     <main>
       <Present />
-      <Products />
+      <ProductsServerComponent />
       <Advantages />
       <Auditories />
       <Info />
