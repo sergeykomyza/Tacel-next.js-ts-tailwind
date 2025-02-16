@@ -12,6 +12,12 @@ async function getProducts(){
 
 export default async function ProductsServerComponent(){
   const products = await getProducts()
-
-  return <ProductsClientComponent products={products} />
+  const productsProps = products.map((product: any) => ({
+    ...product,
+    // id: product.id,
+    // title: product.title,
+    // content: product.content,
+    // slug: product.slug 
+  }));
+  return <ProductsClientComponent products={productsProps} />
 }

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import ProductsTabs from '@/components/ProductsTabs';
 
 async function getProduct(slug: string) {
   // Здесь fetch() выполняет HTTP-запрос к API. Поскольку запрос может занимать время, 
@@ -59,7 +60,7 @@ export default async function ProductPage({params}: { params: { slug?: string } 
     
     <div className='pt-10 pb-10'>
       <div className='container'>
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 lg:mb-24 mb-10">
 
               <figure className='shrink-0 flex justify-center'>
                 <Image
@@ -76,13 +77,12 @@ export default async function ProductPage({params}: { params: { slug?: string } 
               <div>
                 <h5 className='mb-10 text-[25px]/[1] font-bold lg:text-[30px]/[1]'>{product.title}</h5>
                 <p className='mb-7 text-[20px] font-light'>{product.content}</p>
-                <p className='mb-2'>Инновационный продукт, уникальность которого состоит в том, что ключевым ингредиентом при производстве является охлажденное высококачественное мясо в оптимально подобранном сочетании с белками растительного происхождения и минерально-витаминным комплексом.</p>
-                <p className='mb-2'>Это позволяет при употреблении 1500-2000 мл. продукта обеспечить дневную потребность организма</p>
-                <p className='mb-2'>Результат - ускоренное нарастание общего белка и альбумина, уровня суточного железа и увеличение количества лимфоцитов при отсутствии роста уровня сахара в крови.</p>
-                <p className='mb-20'>Может применяться в качестве основного или дополнительного источника питания, особенно в после- операционный период, и позволит решить проблему приедаемости пищи и расширить ассортимент предлагаемых продуктов для энтерального питания</p>
-
+                <p>{product.description}</p>
               </div>
             </div>
+
+            <ProductsTabs descr={product.description} />
+
           </div>
     </div>
 
