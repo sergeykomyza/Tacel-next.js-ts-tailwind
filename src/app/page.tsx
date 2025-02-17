@@ -1,6 +1,6 @@
 
 
-import ProductsServerComponent from "@/components/ProductsServerComponent";
+import ProductsSlides from "@/components/ProductsSlides";
 import Present from "../sections/Present";
 import Advantages from "@/sections/Advantages";
 import Auditories from "@/sections/Auditories";
@@ -11,7 +11,7 @@ export default function Home() {
 
     <main>
       <Present />
-      <ProductsServerComponent />
+      <ProductsSlides />
       <Advantages />
       <Auditories />
       <Info />
